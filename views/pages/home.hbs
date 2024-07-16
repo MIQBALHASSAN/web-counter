@@ -1,0 +1,74 @@
+<div class='w-full py-8'>
+  <form action='/webcounter' method='POST'>
+    <div class='grid grid-cols-4'>
+      {{#each images}}
+        <div class='flex justify-center items-center gap-2'>
+          <input
+            class='w-8'
+            type='radio'
+            id='image-{{@index}}'
+            name='style'
+            value='{{this.name}}'
+          />
+          <label for='image-{{@index}}' class='w-24'>
+            <img
+              src='{{this.path}}'
+              alt='Image {{@index}}'
+              class='w-full object-cover'
+            />
+          </label>
+        </div>
+      {{/each}}
+    </div>
+    <div class='mt-5 py-3 flex flex-col items-center justify-center gap-2'>
+      <div class='flex items-center'>
+        <div class='pr-2'>Page Name :</div>
+        <input
+          name='pageurl'
+          type='text'
+          class='w-72 p-2 border border-gray-400 outline-none'
+        />
+      </div>
+      <div class='flex items-center'>
+        <div class='pr-2'>Starting Count:</div>
+        <input
+          name='count'
+          type='text'
+          class='w-72 p-2 border border-gray-400 outline-none'
+        />
+      </div>
+      <div class='flex items-center'>
+        <div class='pr-2'>Number of Digits:</div>
+        <select
+          name='number_digits'
+          class='w-72 p-2 border border-gray-400 outline-none'
+        >
+          <option value='1'>1</option>
+          <option value='2'>02</option>
+          <option value='3'>003</option>
+          <option value='4'>0004</option>
+          <option value='5'>00005</option>
+          <option value='6'>000006</option>
+          <option value='7'>0000007</option>
+          <option value='8'>00000008</option>
+          <option value='9'>000000009</option>
+        </select>
+      </div>
+      <div class='flex'>
+        <span>Counter Type:</span>
+        <div class='counter_type_radio_wrap'>
+          <input name='type' type='radio' value='page' />
+          <label>PageViews</label>
+          <input name='type' type='radio' value='ip' />
+          <label>UniqueVisitors</label>
+        </div>
+      </div>
+    </div>
+    <div class='text-center'>
+      <button
+        class='mt-5 bg-[#556b2f] uppercase border-none text-base py-3 px-5 text-white'
+        type='submit'
+      >Get Your Counter Code</button>
+    </div>
+  </form>
+</div>

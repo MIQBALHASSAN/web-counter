@@ -1,0 +1,64 @@
+body {
+  padding: 0px;
+  margin: 0;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+.counter_container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto auto auto auto;
+}
+.counter_wrap {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.counter_radio_btn {
+  width: 30px;
+}
+.counter_radio_label {
+  width: 100px;
+}
+.counter_radio_label img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.data_container {
+  margin-top: 20px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.conunter_form_control {
+  display: flex;
+  align-items: center;
+}
+.counter_input {
+  width: 300px;
+  padding: 6px;
+  outline: none;
+}
+.counter_label {
+  padding-right: 5px;
+}
+.counter_type {
+  display: flex;
+}
+.counter_submit_wrap {
+  text-align: center;
+}
+.counter_submit_btn {
+  margin-top: 20px;
+  background-color: #556b2f;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+}
